@@ -57,10 +57,10 @@ suite('Unit Tests', function(){
     /** 6 - .strictEqual(), .notStrictEqual() **/
     // .strictEqual() compares objects using '==='
     test('#strictEqual, #notStrictEqual', function(){
-      assert.notEqual( 6, '6' );
-      assert.equal( 6, 3*2 );
-      assert.notEqual( 6 * '2', 12 );
-      assert.equal( [1, 'a', {} ], [1, 'a', {}] );
+      assert.notStrictEqual( 6, '6' );
+      assert.strictEqual( 6, 3*2 );
+      assert.strictEqual( 6 * '2', 12 );
+      assert.notStrictEqual( [1, 'a', {} ], [1, 'a', {}] );
     });
     /** 7 - .deepEqual(), .notDeepEqual() **/
     // .deepEqual() asserts that two object are deep equal
