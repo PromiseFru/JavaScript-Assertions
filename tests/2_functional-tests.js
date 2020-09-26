@@ -242,23 +242,13 @@ suite('Functional Tests', function() {
           .fill('surname', 'Colombo')
           .pressButton('submit', function(){
             
-            /** YOUR TESTS HERE, Don't forget to remove assert.fail() **/
+            browser.assert.success();
+            browser.assert.text("span#name", "Cristoforo");
+            browser.assert.text("span#surname", "Colombo");
+            browser.assert.element("span#dates", 1);
             
-            // pressButton is Async.  Waits for the ajax call to complete...
-
-            // assert that status is OK 200
-
-            // assert that the text inside the element 'span#name' is 'Cristoforo'
-
-            // assert that the text inside the element 'span#surname' is 'Colombo'
-
-            // assert that the element(s) 'span#dates' exist and their count is 1
-            
-            assert.fail();
-            
-            done();   // It's an async test, so we have to call 'done()''
+            done();
           });
-        // 
       });
       
       /** Try it again... No help this time **/
