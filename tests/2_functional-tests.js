@@ -120,12 +120,9 @@ suite('Functional Tests', function() {
        // we setup the request for you...
        chai.request(server)
         .put('/travellers')
-        /** send {surname: 'Colombo'} here **/
         .send({surname: "Colombo"})
         .send({name: "Cristoforo"})
         .end(function(err, res){
-          
-          /** your tests here **/
           assert.equal(res.status, 200);
           assert.equal(res.type, "application/json");
           assert.equal(res.body.name, "Cristoforo");
