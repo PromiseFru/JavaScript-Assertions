@@ -121,7 +121,8 @@ suite('Functional Tests', function() {
        chai.request(server)
         .put('/travellers')
         /** send {surname: 'Colombo'} here **/
-        .send({surname: "Colombo", name: "Cristoforo"})
+        .send({surname: "Colombo"})
+        .send({name: "Cristoforo"})
         .end(function(err, res){
           
           /** your tests here **/
