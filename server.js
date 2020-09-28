@@ -6,10 +6,11 @@ var cors = require('cors');
 var runner = require('./test-runner');
 
 var bodyParser = require('body-parser');
+app.set('view engine', 'pug');
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/views/index.html');
+  res.render(__dirname + '/views/index.html');
 })
 
 app.use(express.static(__dirname + '/public'));
