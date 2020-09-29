@@ -10,7 +10,7 @@ app.set('view engine', 'pug');
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-  res.render(__dirname + '/views/index');
+  res.render('/views/index');
 })
 
 app.use(express.static(__dirname + '/public'));
