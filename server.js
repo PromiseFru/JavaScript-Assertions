@@ -3,14 +3,15 @@ var express = require('express');
 var app = express();
 
 var cors = require('cors');
+app.set('view engine', 'pug');
+
 var runner = require('./test-runner');
 
 var bodyParser = require('body-parser');
-app.set('view engine', 'pug');
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-  res.render('/views/index');
+  res.render('/views/index.html');
 })
 
 app.use(express.static(__dirname + '/public'));
