@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 
 var cors = require('cors');
+app.use(cors());
 app.set('view engine', 'pug');
 
 var runner = require('./test-runner');
