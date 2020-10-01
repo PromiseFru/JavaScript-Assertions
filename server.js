@@ -3,8 +3,6 @@ var express = require('express');
 var app = express();
 
 var cors = require('cors');
-app.use(cors());
-app.set('view engine', 'pug');
 
 var runner = require('./test-runner');
 
@@ -12,7 +10,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-  res.render(process.cwd() + '/views/pug');
+  res.send("hello world");
 })
 
 app.use(express.static(__dirname + '/public'));
