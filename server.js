@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-  res.render(process.cwd() + '/views/pug/index');
+  res.render(process.cwd() + '/views/pug');
 })
 
 app.use(express.static(__dirname + '/public'));
